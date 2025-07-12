@@ -1,0 +1,5 @@
+# Ignore the file containing secrets
+.env
+
+# Ignore Node.js modules folder
+node_modules/
