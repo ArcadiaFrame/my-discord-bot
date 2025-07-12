@@ -1,17 +1,6 @@
-# Specifies the Docker Compose file format version.
-version: '3.8'
 
-# Defines the services (containers) that make up your application.
 services:
-  # The name of our service.
   discord-bot:
-    # Tells Docker Compose to build the image from the Dockerfile in the current directory ('.').
     build: .
-    # Sets a friendly name for the container so it's easy to identify.
     container_name: my-discord-bot
-    # This policy ensures the bot restarts automatically if it crashes or the server reboots.
     restart: unless-stopped
-    # Loads the environment variables (your token and webhook) from the .env file.
-    # This is how you securely pass secrets to your bot without hardcoding them.
-    env_file:
-      - .env
